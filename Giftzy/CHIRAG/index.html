@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftzy - Your Perfect Gift Destination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo" onclick="showPage('home')">Giftzy</a>
+            <div class="search-box">
+                <input type="text" placeholder="Search for perfect gifts..." id="searchInput">
+                <button class="search-btn" onclick="searchProducts()">Search</button>
+            </div>
+            <div class="user-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Cart <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-item">
+                <a href="#" class="nav-link active" onclick="showPage('home')">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('male')">Male</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('female')">Female</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('kids')">Kids</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('about')">About Us</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('account')">MyAcc</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Welcome to Giftzy</h1>
+                <p>Discover the perfect gifts for everyone you love</p>
+                <button class="cta-btn" onclick="showPage('male')">Start Shopping</button>
+            </div>
+            
+            <div class="category-header">
+                <h2>Featured Products</h2>
+                <p>Handpicked gifts that will make anyone smile</p>
+            </div>
+            
+            <div class="products-grid" id="featuredProducts">
+                <!-- Featured products will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Male Page -->
+        <div id="male" class="page">
+            <div class="category-header">
+                <h2>👨 Gifts for Men</h2>
+                <p>Perfect gifts for the special men in your life</p>
+            </div>
+            <div class="products-grid" id="maleProducts">
+                <!-- Male products will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Female Page -->
+        <div id="female" class="page">
+            <div class="category-header">
+                <h2>👩 Gifts for Women</h2>
+                <p>Beautiful gifts that will make her day special</p>
+            </div>
+            <div class="products-grid" id="femaleProducts">
+                <!-- Female products will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Kids Page -->
+        <div id="kids" class="page">
+            <div class="category-header">
+                <h2>👶 Gifts for Kids</h2>
+                <p>Fun and educational gifts for little ones</p>
+            </div>
+            <div class="products-grid" id="kidsProducts">
+                <!-- Kids products will be loaded here -->
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <div class="about-content">
+                <h2>About Giftzy</h2>
+                <p>At Giftzy, we believe that every gift tells a story. Since our founding, we've been dedicated to helping people express their love, appreciation, and care through thoughtfully curated gifts.</p>
+                
+                <p>Our mission is simple: to make gift-giving a joyful and memorable experience. Whether you're celebrating a birthday, anniversary, holiday, or just want to show someone you care, we have the perfect gift waiting for you.</p>
+                
+                <p>We carefully select each product in our collection, ensuring quality, uniqueness, and value. From personalized items to trending gadgets, from luxury treats to everyday essentials, we offer something special for everyone.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping to your doorstep</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💎</div>
+                    <h3>Quality Products</h3>
+                    <p>Carefully curated gifts that exceed expectations</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Gift Wrapping</h3>
+                    <p>Beautiful packaging for that perfect presentation</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💝</div>
+                    <h3>Personalization</h3>
+                    <p>Custom options to make gifts truly unique</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Account Page -->
+        <div id="account" class="page">
+            <div class="account-section">
+                <h3>👤 Account Information</h3>+
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@email.com</p>
+                <p><strong>Member Since:</strong> January 2024</p>
+            </div>
+            
+            <div class="account-section">
+                <h3>📦 Recent Orders</h3>
+                <div class="order-item">
+                    <h4>Order #GZ001234</h4>
+                    <p><strong>Items:</strong> Smartwatch, Wireless Headphones</p>
+                    <p><strong>Total:</strong> ₹4,499</p>
+                    <p><strong>Date:</strong> August 15, 2025</p>
+                    <span class="order-status status-delivered">Delivered</span>
+                </div>
+                <div class="order-item">
+                    <h4>Order #GZ001235</h4>
+                    <p><strong>Items:</strong> Designer Handbag</p>
+                    <p><strong>Total:</strong> ₹2,999</p>
+                    <p><strong>Date:</strong> August 18, 2025</p>
+                    <span class="order-status status-shipped">Shipped</span>
+                </div>
+                <div class="order-item">
+                    <h4>Order #GZ001236</h4>
+                    <p><strong>Items:</strong> Toy Car Set</p>
+                    <p><strong>Total:</strong> ₹1,299</p>
+                    <p><strong>Date:</strong> August 19, 2025</p>
+                    <span class="order-status status-processing">Processing</span>
+                </div>
+            </div>
+            
+            <div class="account-section">
+                <h3>❤️ Wishlist</h3>
+                <p>Save items for later by clicking the heart icon on any product!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>🛒 Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="text-align: center; padding: 2rem; color: #666;">Your cart is empty</p>
+        </div>
+        <div class="cart-total" id="cartTotal" style="display: none;">
+            <h3>Total: ₹<span id="totalAmount">0</span></h3>
+            <button class="checkout-btn" onclick="showPaymentModal()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💳 Payment Details</h2>
+                <button class="close-modal" onclick="closePaymentModal()">×</button>
+            </div>
+            <form onsubmit="processPayment(event)">
+                <div class="form-group">
+                    <label for="cardName">Cardholder Name</label>
+                    <input type="text" id="cardName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+                <div class="card-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" required placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" required placeholder="123" maxlength="3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="billingAddress">Billing Address</label>
+                    <input type="text" id="billingAddress" required placeholder="123 Main Street, City, State">
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" required>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="upi">UPI</option>
+                        <option value="netbanking">Net Banking</option>
+                        <option value="wallet">Digital Wallet</option>
+                    </select>
+                </div>
+                
+                <div class="payment-methods">
+                    <h4>We Accept:</h4>
+                    <div class="payment-logos-grid">
+                        <div class="payment-logo visa">VISA</div>
+                        <div class="payment-logo mastercard">MasterCard</div>
+                        <div class="payment-logo rupay">RuPay</div>
+                        <div class="payment-logo upi">UPI</div>
+                        <div class="payment-logo paytm">Paytm</div>
+                        <div class="payment-logo gpay">Google Pay</div>
+                        <div class="payment-logo phonepay">PhonePe</div>
+                        <div class="payment-logo amazon">Amazon Pay</div>
+                        <div class="payment-logo netbanking">Net Banking</div>
+                        <div class="payment-logo paypal">PayPal</div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="pay-btn">Pay ₹<span id="paymentAmount">0</span></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notificationText">Item added to cart!</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
